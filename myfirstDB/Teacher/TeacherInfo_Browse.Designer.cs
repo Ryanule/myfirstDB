@@ -42,14 +42,15 @@
             this.DataGridView_Teacher.RowTemplate.Height = 30;
             this.DataGridView_Teacher.Size = new System.Drawing.Size(800, 450);
             this.DataGridView_Teacher.TabIndex = 0;
+            this.DataGridView_Teacher.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_Teacher_CellContentClick);
             // 
-            // TeacherInfo
+            // TeacherInfo_Browse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DataGridView_Teacher);
-            this.Name = "TeacherInfo";
+            this.Name = "TeacherInfo_Browse";
             this.Text = "教师信息浏览";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TeacherInfo_Load);

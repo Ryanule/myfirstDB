@@ -46,5 +46,10 @@ namespace myfirstDB.Teacher
                 return; 
             }
         }
+
+        private void DataGridView_Teacher_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

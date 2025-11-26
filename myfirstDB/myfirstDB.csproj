@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelIO\ExcelIO.cs" />
+    <Compile Include="ExcelIO\ExportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelIO\ExportExcel.Designer.cs">
+      <DependentUpon>ExportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelIO\ImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelIO\ImportExcel.Designer.cs">
+      <DependentUpon>ImportExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +95,18 @@
     <Compile Include="Teacher\TeacherInfo_Browse.Designer.cs">
       <DependentUpon>TeacherInfo_Browse.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ExcelIO\ExportExcel.resx">
+      <DependentUpon>ExportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelIO\ImportExcel.resx">
+      <DependentUpon>ImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +128,13 @@
     <EmbeddedResource Include="Teacher\TeacherInfo_Browse.resx">
       <DependentUpon>TeacherInfo_Browse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\TeacherInfo_Update.resx">
+      <DependentUpon>TeacherInfo_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,5 +148,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

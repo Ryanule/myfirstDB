@@ -37,6 +37,9 @@
             this.menu_TeacherQuery = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TeacherUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据导入导出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导入ExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导出ExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_File,
-            this.menu_InformationManagement});
+            this.menu_InformationManagement,
+            this.数据导入导出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -89,21 +93,21 @@
             // menu_View_TeacherInfobyDG
             // 
             this.menu_View_TeacherInfobyDG.Name = "menu_View_TeacherInfobyDG";
-            this.menu_View_TeacherInfobyDG.Size = new System.Drawing.Size(180, 22);
+            this.menu_View_TeacherInfobyDG.Size = new System.Drawing.Size(148, 22);
             this.menu_View_TeacherInfobyDG.Text = "教师信息浏览";
             this.menu_View_TeacherInfobyDG.Click += new System.EventHandler(this.menu_View_TeacherInfobyDG_Click);
             // 
             // menu_TeacherQuery
             // 
             this.menu_TeacherQuery.Name = "menu_TeacherQuery";
-            this.menu_TeacherQuery.Size = new System.Drawing.Size(180, 22);
+            this.menu_TeacherQuery.Size = new System.Drawing.Size(148, 22);
             this.menu_TeacherQuery.Text = "教师信息查询";
             this.menu_TeacherQuery.Click += new System.EventHandler(this.menu_TeacherQuery_Click);
             // 
             // menu_TeacherUpdate
             // 
             this.menu_TeacherUpdate.Name = "menu_TeacherUpdate";
-            this.menu_TeacherUpdate.Size = new System.Drawing.Size(180, 22);
+            this.menu_TeacherUpdate.Size = new System.Drawing.Size(148, 22);
             this.menu_TeacherUpdate.Text = "教师信息更新";
             this.menu_TeacherUpdate.Click += new System.EventHandler(this.menu_TeacherUpdate_Click);
             // 
@@ -112,6 +116,30 @@
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
             this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.用户管理ToolStripMenuItem.Text = "用户管理";
+            this.用户管理ToolStripMenuItem.Click += new System.EventHandler(this.用户管理ToolStripMenuItem_Click);
+            // 
+            // 数据导入导出ToolStripMenuItem
+            // 
+            this.数据导入导出ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导入ExcelToolStripMenuItem,
+            this.导出ExcelToolStripMenuItem});
+            this.数据导入导出ToolStripMenuItem.Name = "数据导入导出ToolStripMenuItem";
+            this.数据导入导出ToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.数据导入导出ToolStripMenuItem.Text = "数据导入/导出";
+            // 
+            // 导入ExcelToolStripMenuItem
+            // 
+            this.导入ExcelToolStripMenuItem.Name = "导入ExcelToolStripMenuItem";
+            this.导入ExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.导入ExcelToolStripMenuItem.Text = "导入Excel";
+            this.导入ExcelToolStripMenuItem.Click += new System.EventHandler(this.导入ExcelToolStripMenuItem_Click);
+            // 
+            // 导出ExcelToolStripMenuItem
+            // 
+            this.导出ExcelToolStripMenuItem.Name = "导出ExcelToolStripMenuItem";
+            this.导出ExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.导出ExcelToolStripMenuItem.Text = "导出Excel";
+            this.导出ExcelToolStripMenuItem.Click += new System.EventHandler(this.导出ExcelToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -121,7 +149,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "资环学院教学科研管理信息系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -144,5 +172,8 @@
         private System.Windows.Forms.ToolStripMenuItem menu_TeacherQuery;
         private System.Windows.Forms.ToolStripMenuItem menu_TeacherUpdate;
         private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 数据导入导出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导入ExcelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导出ExcelToolStripMenuItem;
     }
 }

@@ -37,32 +37,37 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.DB_TeacherInfo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DB_TeacherInfo)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 33);
+            this.label1.Location = new System.Drawing.Point(32, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.Size = new System.Drawing.Size(134, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "请输入教师姓名";
             // 
             // txt_TeacherName
             // 
-            this.txt_TeacherName.Location = new System.Drawing.Point(116, 30);
+            this.txt_TeacherName.Location = new System.Drawing.Point(174, 45);
+            this.txt_TeacherName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TeacherName.Name = "txt_TeacherName";
-            this.txt_TeacherName.Size = new System.Drawing.Size(100, 21);
+            this.txt_TeacherName.Size = new System.Drawing.Size(148, 28);
             this.txt_TeacherName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(233, 33);
+            this.label2.Location = new System.Drawing.Point(350, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "请选择职称";
             // 
@@ -86,16 +91,18 @@
             "实验师",
             "助理实验师",
             "实验员"});
-            this.com_TeacherProfessor.Location = new System.Drawing.Point(304, 30);
+            this.com_TeacherProfessor.Location = new System.Drawing.Point(456, 45);
+            this.com_TeacherProfessor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.com_TeacherProfessor.Name = "com_TeacherProfessor";
-            this.com_TeacherProfessor.Size = new System.Drawing.Size(121, 20);
+            this.com_TeacherProfessor.Size = new System.Drawing.Size(180, 26);
             this.com_TeacherProfessor.TabIndex = 2;
             // 
             // btn_QuerybyName
             // 
-            this.btn_QuerybyName.Location = new System.Drawing.Point(510, 30);
+            this.btn_QuerybyName.Location = new System.Drawing.Point(728, 42);
+            this.btn_QuerybyName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_QuerybyName.Name = "btn_QuerybyName";
-            this.btn_QuerybyName.Size = new System.Drawing.Size(75, 23);
+            this.btn_QuerybyName.Size = new System.Drawing.Size(112, 34);
             this.btn_QuerybyName.TabIndex = 3;
             this.btn_QuerybyName.Text = "按姓名查询";
             this.btn_QuerybyName.UseVisualStyleBackColor = true;
@@ -103,9 +110,10 @@
             // 
             // btn_QuerybyProfessor
             // 
-            this.btn_QuerybyProfessor.Location = new System.Drawing.Point(604, 30);
+            this.btn_QuerybyProfessor.Location = new System.Drawing.Point(892, 42);
+            this.btn_QuerybyProfessor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_QuerybyProfessor.Name = "btn_QuerybyProfessor";
-            this.btn_QuerybyProfessor.Size = new System.Drawing.Size(75, 23);
+            this.btn_QuerybyProfessor.Size = new System.Drawing.Size(112, 34);
             this.btn_QuerybyProfessor.TabIndex = 4;
             this.btn_QuerybyProfessor.Text = "按职称查询";
             this.btn_QuerybyProfessor.UseVisualStyleBackColor = true;
@@ -113,9 +121,10 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(696, 31);
+            this.btn_Cancel.Location = new System.Drawing.Point(1050, 42);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancel.Size = new System.Drawing.Size(112, 34);
             this.btn_Cancel.TabIndex = 5;
             this.btn_Cancel.Text = "取消";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -124,10 +133,13 @@
             // DB_TeacherInfo
             // 
             this.DB_TeacherInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DB_TeacherInfo.Location = new System.Drawing.Point(1, 72);
+            this.DB_TeacherInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DB_TeacherInfo.Location = new System.Drawing.Point(0, 0);
+            this.DB_TeacherInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DB_TeacherInfo.Name = "DB_TeacherInfo";
+            this.DB_TeacherInfo.RowHeadersWidth = 62;
             this.DB_TeacherInfo.RowTemplate.Height = 23;
-            this.DB_TeacherInfo.Size = new System.Drawing.Size(801, 379);
+            this.DB_TeacherInfo.Size = new System.Drawing.Size(1200, 572);
             this.DB_TeacherInfo.TabIndex = 7;
             // 
             // panel1
@@ -139,24 +151,37 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_QuerybyName);
             this.panel1.Controls.Add(this.com_TeacherProfessor);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 75);
+            this.panel1.Size = new System.Drawing.Size(1200, 103);
             this.panel1.TabIndex = 8;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.DB_TeacherInfo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1200, 572);
+            this.panel2.TabIndex = 9;
             // 
             // TeacherInfo_Query
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.DB_TeacherInfo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TeacherInfo_Query";
             this.Text = "查询教师信息...";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.DB_TeacherInfo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -172,5 +197,6 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.DataGridView DB_TeacherInfo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

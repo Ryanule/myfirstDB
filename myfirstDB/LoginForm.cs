@@ -15,7 +15,7 @@ namespace myfirstDB
     public partial class Loding : Form
     {
         public string ConnString;
-        private  SqlConnection myConn;
+        private SqlConnection myConn;
         public bool IsLogin;
 
         public Loding()

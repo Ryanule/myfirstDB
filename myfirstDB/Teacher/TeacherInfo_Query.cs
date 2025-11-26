@@ -13,27 +13,38 @@ namespace myfirstDB.Teacher
 {
     public partial class TeacherInfo_Query : Form
     {
-        public string myConnString;
+        private string myConnString;
         private SqlConnection myConn;
         public TeacherInfo_Query()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// 重载构造函数，传入数据库连接字符串
+        /// </summary>
+        /// <param name="ConnString">数据库连接字符串</param>
+        /// 
+#region 重载构造函数
         public TeacherInfo_Query(string ConnString)
         {
             InitializeComponent();
             myConnString = ConnString;
         }
-
+#endregion
+#region 按姓名查询
         private void btn_QuerybyName_Click(object sender, EventArgs e)
         {
             if (this.txt_TeacherName.Text.Trim().Length != 0)
             {
+
                 try
                 {
                     myConn = new SqlConnection(myConnString);
+                    //模糊查询
                     string mySql = "select * from 教师信息 where 姓名 like '%" +
                         this.txt_TeacherName.Text.Trim() + "%'";
+                    //精确查询
+                    //string mySql = "select * from 教师信息 where 姓名 = '" +this.txt_TeacherName.Text.Trim() + "'";
                     myConn.Open();
 
                     SqlDataAdapter myDA = new SqlDataAdapter(mySql, myConn);
@@ -52,6 +63,7 @@ namespace myfirstDB.Teacher
                     myConn.Close();
                     return;
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -65,7 +77,8 @@ namespace myfirstDB.Teacher
                 return;
             }
         }
-
+        #endregion
+#region 按职称查询
         private void btn_QuerybyProfessor_Click(object sender, EventArgs e)
         {
             if (this.com_TeacherProfessor.Text.Trim().Length != 0)
@@ -106,10 +119,12 @@ namespace myfirstDB.Teacher
                 return;
             }
         }
-
+        #endregion
+#region 取消
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+#endregion
     }
 }
